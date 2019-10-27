@@ -1,0 +1,158 @@
+.bar-black {
+  width: 100px;
+  height: 0px;
+  border-top: 4px solid #444649;
+  margin: 0 auto 50px;
+}
+
+h3 {
+  color: #444649;
+  font-size: $s-title;
+  font-weight: $bold;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 100px 0 30px;
+  margin: 0;
+}
+
+.avatar {
+  display: flex;
+  margin: 0 auto;
+  max-width: 780px;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.avatar__image {
+  background: url('./images/avatar.png');
+  background-size: cover;
+  height: 168px;
+  width: 170px;
+}
+
+// .icon__pencil {
+//   background: url('/images/pencil.png');
+//   background-size: cover;
+//   height: 100px;
+//   width: 100px;
+//   order: 1;
+// }
+
+// .icon__mouse {
+//   background: url('/images/mouse.png');
+//   background-size: cover;
+//   height: 100px;
+//   width: 100px;
+//   order: 2;
+// }
+
+// .icon__browser {
+//   background: url('/images/browser.png');
+//   background-size: cover;
+//   height: 100px;
+//   width: 100px;
+//   order: 4;
+// }
+
+// .icon__video {
+//   background: url('/images/video.png');
+//   background-size: cover;
+//   height: 100px;
+//   width: 100px;
+//   order: 5;
+// }
+
+@media screen and (max-width: 650px) {
+  .avatar {
+    display: block;
+    text-align: center;
+    div {
+      display: inline-block;
+    }
+    .avatar__image {
+      background-position: center center;
+      background-repeat: no-repeat;
+      display: block;
+      height: 200px;
+      margin:0 auto 30px;
+      width: 200px;
+    }
+    [class^="icon__"] {
+      margin: 10px;
+    }
+  }
+}
+
+.intro {
+  color: rgba(0,0,0,0.5);
+  font-size: 18px;
+  font-weight: 300;
+  padding: 0 15px;
+  line-height: 2.5em;
+  margin: 50px auto;
+  max-width: 620px;
+  text-align: center;
+}
+
+.skill {
+  color: #999;
+  font-size: $s-font;
+  max-width: 540px;
+  margin: 100px auto;
+  overflow: auto;
+
+  h3 {
+    padding: 0 0 30px;
+  }
+}
+
+// .skill__category {
+//   margin-bottom: 30px;
+// }
+
+.skill__unit {
+  width: 240px;
+  float: left;
+  margin-left: 30px;
+  //text-align: center;
+}
+
+.skill__label {
+  margin-bottom: 10px;
+}
+
+.skill__icon {
+  margin: 3px 0 30px;
+  span {
+    background-color: #3498DB;
+    // border-radius: 50%;
+    display: inline-block;
+    // height: 14px;
+    margin-right: 5px;
+    // width: 14px;
+    width: 15px;
+	  height: 10px;
+	  transform: skew(20deg);
+
+    // &:after {
+    //   background: #fff;
+    //   border-radius: 50%;
+    //   content: '';
+    //   display: block;
+    //   height: 10px;
+    //   margin: 2px;
+    //   width: 10px;
+    // }
+  }
+
+  @for $i from 1 through 10 {
+    &.level-#{$i} span:nth-child(n+#{$i+1}) {
+      background: $iconbg;
+    }
+  }
+}
+ @media screen and (max-width: 541px) {
+   .skill {
+     width: 270px;
+   }
+ }
